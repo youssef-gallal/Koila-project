@@ -1,0 +1,93 @@
+<div class="container mt-3">
+    <div class="mt-5" style="background-color: #eee;">
+        <header class="text-center p-3 mb-3">
+            <h1>Create New Analysis</h1>
+        </header>
+        <form [formGroup]="productForm">
+            <div class="row ">
+                <div class="col-md-6 col-sm-12">
+                    <mat-form-field class="w-100 ">
+                        <mat-label for="">اسم العميل</mat-label>
+                        <input matInput type="text" formControlName="name">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <mat-form-field class="w-100">
+                        <mat-label for="">رقم التواصل</mat-label>
+                        <input matInput type="text" placeholder="012/22222/222" formControlName="phoneNumber">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <mat-form-field class="w-100">
+                        <mat-label for="">بريد الاكتروني</mat-label>
+                        <input matInput type="email" placeholder="John@aaaa" formControlName="Email">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <mat-form-field class="w-100">
+                        <mat-label>دوله</mat-label>
+                        <mat-select formControlName="TargetCountries">
+                            <mat-option value="مصر">مصر</mat-option>
+                            <mat-option value="السعوديه">السعوديه</mat-option>
+                            <mat-option value="الامارات">الامارات</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <mat-form-field class="w-100">
+                        <mat-label>المدة المتوقعة لإطلاق المشروع</mat-label>
+                        <mat-select formControlName="LaunchDate">
+                            <mat-option value="شهرين">شهرين</mat-option>
+                            <mat-option value="سيدات">سته اشهر</mat-option>
+                            <mat-option value="سنة">سنة</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <mat-form-field class="w-100">
+                        <mat-label>الجمهور المستهدف</mat-label>
+                        <mat-select formControlName="TargetPeople">
+                            <mat-option value="شباب">شباب</mat-option>
+                            <mat-option value="سيدات ">سيدات</mat-option>
+                            <mat-option value="أصحاب أعمال">أصحاب أعمال</mat-option>
+                            <mat-option value="طلاب">طلاب</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <mat-form-field class="w-100">
+                        <mat-label>نوع المشروع</mat-label>
+                        <mat-select formControlName="ProjectType">
+                            <mat-option value="مطعم">مطعم</mat-option>
+                            <mat-option value="تطبيق">تطبيق</mat-option>
+                            <mat-option value="خدمة توصيل">خدمة توصيل</mat-option>
+                            <mat-option value="متجر أونلاين">متجر أونلاين</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <mat-form-field class="w-100">
+                        <mat-label>المجال</mat-label>
+                        <mat-select formControlName="field">
+                            <mat-option value="تجميل">تجميل</mat-option>
+                            <mat-option value="تقنية ">تقنية</mat-option>
+                            <mat-option value="أغذية">أغذية</mat-option>
+                            <mat-option value="ملابس">ملابس</mat-option>
+                            <mat-option value="سياحة">سياحة</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <mat-form-field class="w-100">
+                        <mat-label for="">الميزانية</mat-label>
+                        <input matInput type="number" placeholder="$ 1000" formControlName="Budget">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div style="float: right;" class="mt-3">
+                <button class=" btn btn-danger" type="reset">cancel</button>
+                <button class=" btn btn-primary mx-2" type="submit" [disabled]="productForm.invalid"
+                    (click)="submit()">submit</button>
+            </div>
+        </form>
+    </div>

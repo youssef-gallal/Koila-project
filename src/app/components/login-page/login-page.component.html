@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="row w-100 justify-content-center">
+        <div class="card col-md-5 p-5" style="background-color: #eee;">
+            <h2 class="mb-4 text-center">Login</h2>
+            <form [formGroup]=" loginForm">
+                <div class="form-group mb-2">
+                    <label for="email">User name:</label>
+                    <input type="email" id="email" name="userName" class="form-control" formControlName="username"
+                        placeholder="username">
+                </div>
+                <div class="form-group mb-4">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control" formControlName="password"
+                        placeholder="password">
+                </div>
+                <button type="submit" [disabled]="loginForm.invalid" style="width: 100%;" class="btn btn-primary"
+                    (click)="submit()">submit</button>
+            </form>
+        </div>
+    </div>
+</div>
