@@ -27,31 +27,23 @@ export class CreateFormComponent implements OnInit {
       this.username = this.services.getUsername();
   }
 
-
-
-
-
   initForm() {
     this.productForm = this.fb.group({
       name: [this.username, Validators.required],
       phoneNumber: ['', Validators.required],
-      Email: ['', Validators.required],
+      Email: ['', [Validators.required, Validators.email]],
       TargetCountries: ['', Validators.required],
       LaunchDate: ['', Validators.required],
       TargetPeople: ['', Validators.required],
       ProjectType: ['', Validators.required],
       field: ['', Validators.required],
       Budget: ['', Validators.required]
-
     });
   }
 
-
-
-
-
-
-
+  cancel() {
+    this.router.navigate(['/Home'])
+  }
   submit() {
     const form = this.productForm.value
     console.log(form)

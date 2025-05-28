@@ -2,10 +2,21 @@
     <header>
         <div class="mt-4 d-flex justify-content-between align-items-center">
             <div>
-                <h4>Welcome, <span style="color: blue;">{{ username }}</span></h4>
+                <!-- <h4>Welcome, <span style="color: blue;">{{ username }}</span></h4> -->
+                <h2 style="color: blue;">MArket Analyzer</h2>
             </div>
-            <div>
-                <button class="btn btn-primary" (click)="createform()">Start Analysis</button>
+            <div class="d-flex">
+                @if (username) {
+                <h4>Welcome:<button class="fs-5" mat-button [matMenuTriggerFor]="menu">{{username}}</button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="logout()">Log out</button>
+                    </mat-menu>
+                </h4>
+                }
+                @if (!username){
+                <button class="btn btn-primary mx-2" (click)="login()">Log in</button>
+                <button class="btn btn-success mx-2" (click)="SignUp()">Sign Up</button>
+                }
             </div>
         </div>
     </header>
@@ -21,10 +32,17 @@
                     research, and insights. We focus on transforming complex datasets into clear, actionable knowledge
                     that drives better decision-making. Whether you're a business leader, researcher, or student, our
                     tools and reports are designed to help you uncover trends, patterns, and opportunities hidden in
+                </p>
+                @if (username)
+                { <div class="text-center mt-5">
+                    <button class=" btn btn-primary " (click)="createform()">Start Analysis</button>
+                </div>}
+                @if (!username)
+                { <div class="text-center mt-5">
+                    <button class=" btn btn-primary " (click)="login()">Start Analysis</button>
+                </div>}
+
             </div>
         </div>
     </div>
-
-
-
 </div>

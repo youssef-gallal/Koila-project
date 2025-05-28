@@ -7,7 +7,7 @@ import { LoginPageComponent } from "./components/login-page/login-page.component
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatCardModule, HomePageComponent, ResultPageComponent, LoginPageComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
