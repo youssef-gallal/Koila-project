@@ -22,6 +22,7 @@ export class RegisterComponent {
     this.RegisterForm = this.fb.group({
       username: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
+      country: ['', [Validators.required]],
       password: ['', [Validators.required]],
       cpassword: ['', [Validators.required]]
     })
@@ -31,6 +32,7 @@ export class RegisterComponent {
     const registerDAta = {
       userName: this.RegisterForm.value.username,
       email: this.RegisterForm.value.email,
+      country: this.RegisterForm.value.country,
       password: this.RegisterForm.value.password,
       cpassword: this.RegisterForm.value.cpassword
     }

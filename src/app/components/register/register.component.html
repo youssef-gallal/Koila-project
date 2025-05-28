@@ -14,6 +14,11 @@
                         placeholder="Email">
                 </div>
                 <div class="form-group mb-4">
+                    <label for="country"> country:</label>
+                    <input type="text" id="country" name="country" class="form-control" formControlName="country"
+                        placeholder="country">
+                </div>
+                <div class="form-group mb-4">
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" class="form-control" formControlName="password"
                         placeholder="password">
@@ -23,6 +28,7 @@
                     <input type="password" id="confirmpassword" name="confirmpassword" class="form-control"
                         formControlName="cpassword" placeholder="password">
                 </div>
+
                 <button type="submit" [disabled]="RegisterForm.invalid" style="width: 100%;" class="btn btn-primary"
                     (click)="submit()">submit</button>
             </form>
