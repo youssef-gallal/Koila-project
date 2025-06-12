@@ -30,7 +30,7 @@ export class LoginPageComponent {
       password: this.loginForm.value.password
     }
     localStorage.setItem('userName', loginData.userName)
-    this.router.navigate(['/Home'])
+    this.router.navigate(['/Pricing'])
     console.log(loginData)
   }
 }

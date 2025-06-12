@@ -1,0 +1,15 @@
+.bg-form {
+    background: linear-gradient(to right, #e3f2fd, #fff);
+    padding: 40px 0;
+}
+
+.card {
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.mat-form-field {
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 5px;
+}

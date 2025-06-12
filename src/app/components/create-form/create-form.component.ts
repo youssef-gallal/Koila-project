@@ -29,15 +29,16 @@ export class CreateFormComponent implements OnInit {
 
   initForm() {
     this.productForm = this.fb.group({
-      name: [this.username, Validators.required],
-      phoneNumber: ['', Validators.required],
       Email: ['', [Validators.required, Validators.email]],
       TargetCountries: ['', Validators.required],
       LaunchDate: ['', Validators.required],
       TargetPeople: ['', Validators.required],
       ProjectType: ['', Validators.required],
-      field: ['', Validators.required],
-      Budget: ['', Validators.required]
+      Budget: ['', Validators.required],
+      Revenue: ['', Validators.required],
+      Expencese: ['', Validators.required],
+      RevExp: ['', Validators.required]
+
     });
   }
 

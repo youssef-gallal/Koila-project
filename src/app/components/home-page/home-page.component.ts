@@ -22,19 +22,26 @@ export class HomePageComponent implements OnInit {
 
   constructor(private router: Router, private services: AllServicesService) { }
   username: string | null = '';
+  selectedPlan: string | null = '';
 
   ngOnInit(): void {
     this.username = this.services.getUsername();
+    this.selectedPlan = this.services.getSelectedplan();
+
   }
 
   createform() {
-    this.router.navigate(['/createForm'])
+    this.router.navigate(['/CreateForm'])
   }
   login() {
     this.router.navigate(['/login'])
   }
   SignUp() {
     this.router.navigate(['/Register'])
+  }
+
+  Pricing() {
+    this.router.navigate(['/Pricing'])
   }
   logout() {
     this.router.navigate(['/login'])

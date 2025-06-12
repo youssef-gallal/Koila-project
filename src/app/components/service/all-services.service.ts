@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,8 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class AllServicesService {
 
-  constructor(private http: HttpClient) { }
+
   getUsername() {
     return localStorage.getItem('userName');
+  }
+  getSelectedplan() {
+    return localStorage.getItem('selectedPlan');
   }
 }
