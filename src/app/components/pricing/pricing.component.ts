@@ -49,5 +49,8 @@ export class PricingComponent {
     localStorage.setItem('selectedPlan', JSON.stringify(id));
     this.router.navigate(['/CreateForm']);
   }
+  Freetrial() {
+    this.router.navigate(['/CreateForm']);
+  }
 
 }

@@ -29,7 +29,7 @@ export class CreateFormComponent implements OnInit {
 
   initForm() {
     this.productForm = this.fb.group({
-      Email: ['', [Validators.required, Validators.email]],
+      ProjectName: ['', Validators.required],
       TargetCountries: ['', Validators.required],
       LaunchDate: ['', Validators.required],
       TargetPeople: ['', Validators.required],
@@ -37,7 +37,8 @@ export class CreateFormComponent implements OnInit {
       Budget: ['', Validators.required],
       Revenue: ['', Validators.required],
       Expencese: ['', Validators.required],
-      RevExp: ['', Validators.required]
+      RevExp: ['', Validators.required],
+      Keyword: ['', Validators.required]
 
     });
   }
